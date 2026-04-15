@@ -417,8 +417,82 @@ nav.scrolled {
 /* Contact */
 .contact {
     text-align: center;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-link {
+    color: var(--text-muted);
+    transition: var(--transition);
+    font-size: 1.05rem;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: var(--text-main);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: var(--bg-cards);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-submit {
+    margin-top: 0.5rem;
+}
+
+/* Social Icons */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: var(--transition);
+    padding: 0.6rem;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.social-icon:hover {
+    color: var(--text-main);
+    transform: translateY(-3px);
+    background: var(--bg-primary);
 }
 
 /* Animations */
@@ -489,5 +563,10 @@ nav.scrolled {
     .featured-project {
         padding: 2.5rem;
         border-radius: 12px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 }
